@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events — AI-nstein 2K26</title>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/fear-robot">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/bg.css">
+  <link rel="stylesheet" href="../css/events.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <!-- Fixed Background -->
+  <div id="bg-container">
+    <div id="hex-grid"></div>
+    <div id="hex-spotlight"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="../html/index.html" class="navbar-logo">
+        <img src="../asset/logo.png" alt="AI-nstein 2K26" class="navbar-logo-img" />
+        <span class="navbar-logo-text"><span class="accent">AI</span>-nstein <span class="accent">2K26</span></span>
+      </a>
+      <a href="#" class="navbar-register">Register Now</a>
+    </div>
+  </nav>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="event-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close">✕</button>
+      <p class="modal-tag" id="modal-tag"></p>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-aka" id="modal-aka"></p>
+      <div class="modal-divider"></div>
+      <div class="modal-meta-row" id="modal-meta"></div>
+      <div id="modal-body"></div>
+      <div class="modal-footer">
+        <div class="modal-fee">
+          <span class="modal-fee-label">Entry Fee</span>
+          <span class="modal-fee-amount" id="modal-fee"></span>
+        </div>
+        <a href="#" class="btn-register" id="modal-register">Register Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- EVENTS HERO -->
+  <section class="events-hero">
+    <p class="hero-label">AI-nstein 2K26 · Events</p>
+    <h1 class="events-title">The <span class="accent">Arena</span></h1>
+    <p class="events-sub">Pick your battlefield</p>
+  </section>
+
+  <!-- TECHNICAL EVENTS -->
+  <section class="events-section">
+    <div class="section-header">
+      <span class="section-tag">// 01</span>
+      <h2 class="section-title">Technical <span class="accent">Events</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="events-grid">
+
+      <!-- Survival Pitch -->
+      <div class="event-card" data-event="survival-pitch">
+        <div class="card-index">01</div>
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C0FF6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Survival Pitch</h3>
+        <p class="card-aka">aka Shipwreck</p>
+        <p class="card-desc">Teams debate and defend their survival choices in a crisis scenario, competing based on logic, persuasion, and creativity.</p>
+        <div class="card-footer">
+          <span class="card-tag">Technical</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <button class="card-details-btn" data-event="survival-pitch">Full Details</button>
+            <button class="card-expand-btn" aria-label="View details">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-drawer">
+          <div class="drawer-inner">
+            <div class="drawer-section">
+              <p class="drawer-label">Timing</p>
+              <p class="drawer-text">12:30 – 1:30 · CSE SmartRoom</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Rules</p>
+              <ul class="drawer-rules">
+                <li>Each participant is assigned a role/character to defend</li>
+                <li>No offensive or inappropriate language allowed</li>
+                <li>Stay in character throughout the round</li>
+                <li>Time limits must be strictly followed</li>
+              </ul>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Judging</p>
+              <p class="drawer-text">Judges' decisions are final</p>
+            </div>
+            <div class="drawer-fee-row">
+              <div class="drawer-fee">
+                <span class="drawer-fee-label">Entry Fee</span>
+                <span class="drawer-fee-amount">₹200 / head</span>
+              </div>
+              <a href="#" class="btn-register">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Sprint -->
+      <div class="event-card" data-event="ai-sprint">
+        <div class="card-index">02</div>
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C0FF6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M9 9l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3 class="card-title"><span class="nobreak">AI Sprint</span></h3>
+        <p class="card-aka">aka AI-Hackathon</p>
+        <p class="card-desc">Teams build a quick AI-based solution or prototype for a given problem within limited time.</p>
+        <div class="card-footer">
+          <span class="card-tag">Technical</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <button class="card-details-btn" data-event="ai-sprint">Full Details</button>
+            <button class="card-expand-btn" aria-label="View details">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-drawer">
+          <div class="drawer-inner">
+            <div class="drawer-section">
+              <p class="drawer-label">Timing</p>
+              <p class="drawer-text">12:30 – 1:30 · CSE Lab</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Team Size</p>
+              <p class="drawer-text">2–4 members</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Rules</p>
+              <ul class="drawer-rules">
+                <li>Problem statement given on the spot</li>
+                <li>AI tools (ChatGPT, Copilot etc.) allowed</li>
+                <li>Pre-built project code not allowed</li>
+              </ul>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Judging</p>
+              <p class="drawer-text">Creativity, implementation, clarity, and effective use of AI</p>
+            </div>
+            <div class="drawer-fee-row">
+              <div class="drawer-fee">
+                <span class="drawer-fee-label">Entry Fee</span>
+                <span class="drawer-fee-amount">₹200 / head</span>
+              </div>
+              <a href="#" class="btn-register">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brain Battle -->
+      <div class="event-card" data-event="brain-battle">
+        <div class="card-index">03</div>
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C0FF6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Brain Battle</h3>
+        <p class="card-aka">aka Quiz</p>
+        <p class="card-desc">Participants compete in multiple rounds of rapid-fire and technical/general knowledge questions.</p>
+        <div class="card-footer">
+          <span class="card-tag">Technical</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <button class="card-details-btn" data-event="brain-battle">Full Details</button>
+            <button class="card-expand-btn" aria-label="View details">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-drawer">
+          <div class="drawer-inner">
+            <div class="drawer-section">
+              <p class="drawer-label">Timing</p>
+              <p class="drawer-text">11:30 – 12:30 · CSE SmartRoom</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Team Size</p>
+              <p class="drawer-text">2–3 members</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Rules</p>
+              <ul class="drawer-rules">
+                <li>Round 1: MCQ elimination (15–20 questions)</li>
+                <li>Round 2: Rapid fire — no passing allowed</li>
+                <li>Round 3: Buzzer round — wrong answer = -2 marks</li>
+                <li>No mobile phones or external help</li>
+              </ul>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Judging</p>
+              <p class="drawer-text">Quizmaster's decision is final</p>
+            </div>
+            <div class="drawer-fee-row">
+              <div class="drawer-fee">
+                <span class="drawer-fee-label">Entry Fee</span>
+                <span class="drawer-fee-amount">₹200 / head</span>
+              </div>
+              <a href="#" class="btn-register">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Treadmill -->
+      <div class="event-card" data-event="tech-treadmill">
+        <div class="card-index">04</div>
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C0FF6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+            <line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Tech Treadmill</h3>
+        <p class="card-aka">aka Tech Talk / JAM</p>
+        <p class="card-desc">Participants speak on a technical topic for a limited time without hesitation, repetition, or deviation.</p>
+        <div class="card-footer">
+          <span class="card-tag">Technical</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <button class="card-details-btn" data-event="tech-treadmill">Full Details</button>
+            <button class="card-expand-btn" aria-label="View details">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-drawer">
+          <div class="drawer-inner">
+            <div class="drawer-section">
+              <p class="drawer-label">Timing</p>
+              <p class="drawer-text">11:30 – 12:30 · CSE Classroom (I301)</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Format</p>
+              <p class="drawer-text">Individual · Open to all departments · Max 15–25 participants</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Rules</p>
+              <ul class="drawer-rules">
+                <li>Round 1: JAM — 1 minute, no hesitation or repetition</li>
+                <li>Round 2: Tech Talk — 2–3 minute detailed explanation</li>
+                <li>Round 3: Surprise JAM — instant random topic</li>
+              </ul>
+            </div>
+            <div class="drawer-fee-row">
+              <div class="drawer-fee">
+                <span class="drawer-fee-label">Entry Fee</span>
+                <span class="drawer-fee-amount">₹200 / head</span>
+              </div>
+              <a href="#" class="btn-register">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NON-TECHNICAL EVENTS -->
+  <section class="events-section">
+    <div class="section-header">
+      <span class="section-tag">// 02</span>
+      <h2 class="section-title">Non-Technical <span class="accent">Events</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="events-grid">
+
+      <!-- Game Clash -->
+      <div class="event-card nontech" data-event="game-clash">
+        <div class="card-index">01</div>
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C0FF6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Game Clash</h3>
+        <p class="card-aka">aka Esports</p>
+        <p class="card-desc">Teams compete in selected esports titles in knockout or league format.</p>
+        <div class="card-footer">
+          <span class="card-tag nontech-tag">Non-Technical</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <button class="card-details-btn" data-event="game-clash">Full Details</button>
+            <button class="card-expand-btn" aria-label="View details">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-drawer">
+          <div class="drawer-inner">
+            <div class="drawer-section">
+              <p class="drawer-label">Timing</p>
+              <p class="drawer-text">11:30 – 2:30 · CSE Lab</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Rules</p>
+              <ul class="drawer-rules">
+                <li>eFootball: Knockout · 12 min match · Extra time & penalty ON</li>
+                <li>BGMI: TDM 4v4 · TPP · Elimination round</li>
+                <li>Fair play — no cheating allowed</li>
+              </ul>
+            </div>
+            <div class="drawer-fee-row">
+              <div class="drawer-fee">
+                <span class="drawer-fee-label">Entry Fee</span>
+                <span class="drawer-fee-amount">₹200 / head</span>
+              </div>
+              <a href="#" class="btn-register">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trend Parade -->
+      <div class="event-card nontech" data-event="trend-parade">
+        <div class="card-index">02</div>
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C0FF6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Trend Parade</h3>
+        <p class="card-aka">aka Fashion Show</p>
+        <p class="card-desc">Teams present a themed walk showcasing creativity, styling, and confidence.</p>
+        <div class="card-footer">
+          <span class="card-tag nontech-tag">Non-Technical</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <button class="card-details-btn" data-event="trend-parade">Full Details</button>
+            <button class="card-expand-btn" aria-label="View details">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-drawer">
+          <div class="drawer-inner">
+            <div class="drawer-section">
+              <p class="drawer-label">Rules</p>
+              <ul class="drawer-rules">
+                <li>Theme adherence is mandatory</li>
+                <li>Performance and coordination will be evaluated</li>
+              </ul>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Judging</p>
+              <p class="drawer-text">Panel of judges</p>
+            </div>
+            <div class="drawer-fee-row">
+              <div class="drawer-fee">
+                <span class="drawer-fee-label">Entry Fee</span>
+                <span class="drawer-fee-amount">₹200 / head</span>
+              </div>
+              <a href="#" class="btn-register">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vocal Pulse -->
+      <div class="event-card nontech" data-event="vocal-pulse">
+        <div class="card-index">03</div>
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C0FF6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Vocal Pulse</h3>
+        <p class="card-aka">aka Singing</p>
+        <p class="card-desc">Participants perform songs showcasing vocal skill, expression, and stage presence.</p>
+        <div class="card-footer">
+          <span class="card-tag nontech-tag">Non-Technical</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <button class="card-details-btn" data-event="vocal-pulse">Full Details</button>
+            <button class="card-expand-btn" aria-label="View details">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-drawer">
+          <div class="drawer-inner">
+            <div class="drawer-section">
+              <p class="drawer-label">Timing</p>
+              <p class="drawer-text">11:30 – 12:30 · Hilltop</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Team Size</p>
+              <p class="drawer-text">Solo or Group (2–6 members)</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Duration</p>
+              <p class="drawer-text">3–5 minutes per performance</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Rules</p>
+              <ul class="drawer-rules">
+                <li>Tamil, English or Malayalam allowed</li>
+                <li>Bring your own karaoke track (USB / phone)</li>
+                <li>No offensive lyrics</li>
+              </ul>
+            </div>
+            <div class="drawer-fee-row">
+              <div class="drawer-fee">
+                <span class="drawer-fee-label">Entry Fee</span>
+                <span class="drawer-fee-amount">₹200 / head</span>
+              </div>
+              <a href="#" class="btn-register">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beat Theory -->
+      <div class="event-card nontech" data-event="beat-theory">
+        <div class="card-index">04</div>
+        <div class="card-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C0FF6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2z"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Beat Theory</h3>
+        <p class="card-aka">aka Dance</p>
+        <p class="card-desc">Teams or individuals perform choreographed routines based on rhythm and creativity.</p>
+        <div class="card-footer">
+          <span class="card-tag nontech-tag">Non-Technical</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <button class="card-details-btn" data-event="beat-theory">Full Details</button>
+            <button class="card-expand-btn" aria-label="View details">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-drawer">
+          <div class="drawer-inner">
+            <div class="drawer-section">
+              <p class="drawer-label">Timing</p>
+              <p class="drawer-text">3:00 – 4:00 · Hilltop</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Team Size</p>
+              <p class="drawer-text">Solo or Group (up to 6 members)</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Duration</p>
+              <p class="drawer-text">4–6 minutes</p>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Rules</p>
+              <ul class="drawer-rules">
+                <li>Props allowed if safe and manageable</li>
+                <li>Performance should match music and theme</li>
+              </ul>
+            </div>
+            <div class="drawer-section">
+              <p class="drawer-label">Judging</p>
+              <p class="drawer-text">Panel of judges</p>
+            </div>
+            <div class="drawer-fee-row">
+              <div class="drawer-fee">
+                <span class="drawer-fee-label">Entry Fee</span>
+                <span class="drawer-fee-amount">₹200 / head</span>
+              </div>
+              <a href="#" class="btn-register">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="events-footer-space"></div>
+  <script src="../js/script.js"></script>
+</body>
+</html>
