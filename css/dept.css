@@ -1,0 +1,166 @@
+/* ── DEPARTMENT SECTION ── */
+.dept-section {
+  position: relative;
+  z-index: 10;
+  padding: 100px 6vw 80px;
+}
+
+.dept-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── LEFT SIDE ── */
+.dept-left {
+  flex: 0 0 auto;
+  width: clamp(260px, 30vw, 380px);
+  position: sticky;
+  top: 80px;
+}
+
+.dept-heading {
+  font-family: 'Fear Robot', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  color: #D5D5D5;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.dept-heading span {
+  color: #C0FF6B;
+}
+
+/* ── DEPT STATS ── */
+.dept-stat-row {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 32px;
+  border-top: 1px solid #1f1f1f;
+}
+
+.dept-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dept-stat-num {
+  font-family: 'Fear Robot', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  color: #C0FF6B;
+  letter-spacing: 2px;
+}
+
+.dept-stat-label {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #d5d5d5;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ── RIGHT SIDE ── */
+.dept-right {
+  flex: 1;
+  min-width: 0;
+  padding-top: 52px;
+}
+
+.dept-body {
+  font-size: 14px;
+  line-height: 2;
+  color: #d5d5d5;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+/* ── TECH PILLS ── */
+.dept-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.dept-pill {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #d5d5d5;
+  border: 1px solid #1f1f1f;
+  padding: 6px 14px;
+  transition: border-color 0.25s ease, color 0.25s ease;
+  cursor: default;
+}
+
+.dept-pill:hover {
+  border-color: rgba(192, 255, 107, 0.3);
+  color: #C0FF6B;
+}
+
+/* ── BOTTOM DIVIDER ── */
+.dept-divider {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #1f1f1f, transparent);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .dept-inner {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .dept-left {
+    width: 100%;
+    position: static;
+  }
+
+  .dept-stat-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .dept-heading {
+    margin-bottom: 28px;
+  }
+
+  .dept-right {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .dept-section {
+    padding: 80px 24px 60px;
+  }
+
+  .dept-heading {
+    font-size: 1.6rem;
+  }
+
+  .dept-stat-row {
+    gap: 20px;
+  }
+
+  .dept-tags {
+    gap: 8px;
+  }
+
+  .dept-pill {
+    font-size: 9px;
+    padding: 5px 10px;
+  }
+}
