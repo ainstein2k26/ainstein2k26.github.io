@@ -1,15 +1,5 @@
 // ── LOADING SCREEN ──
-const loadingScreen = document.getElementById('loading-screen');
-const loadingVideo  = document.getElementById('loading-video');
 
-if (loadingScreen && loadingVideo) {
-  const hide = () => {
-    loadingScreen.classList.add('fade-out');
-    setTimeout(() => loadingScreen.remove(), 650);
-  };
-  setTimeout(hide, 5000);
-  loadingVideo.addEventListener('ended', hide);
-}
 
 // ── SPOTLIGHT (hex bg) ──
 const spotlight = document.getElementById('hex-spotlight');
