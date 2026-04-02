@@ -639,3 +639,50 @@
   .events-grid    { grid-template-columns: 1fr; }
   .events-section { padding: 40px 20px; }
 }
+/* ── MODAL PRIZE ── */
+.modal-prize-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.modal-prize-item {
+  flex: 1;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border: 1px solid #1f1f1f;
+  transition: border-color 0.25s ease;
+}
+
+.modal-prize-item.gold {
+  border-color: rgba(192, 255, 107, 0.2);
+  background: rgba(192, 255, 107, 0.03);
+}
+
+.modal-prize-item.silver {
+  border-color: rgba(213, 213, 213, 0.1);
+  background: rgba(213, 213, 213, 0.02);
+}
+
+.modal-prize-label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #656565;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.modal-prize-amount {
+  font-family: 'Fear Robot', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.modal-prize-item.gold .modal-prize-amount { color: #C0FF6B; }
+.modal-prize-item.silver .modal-prize-amount { color: #D5D5D5; }
