@@ -1,4 +1,3 @@
-// ── LOADING SCREEN ──
 
 
 // ── SPOTLIGHT (hex bg) ──
@@ -87,6 +86,7 @@ const eventData = {
     title: 'Survival Pitch',
     aka: 'aka Shipwreck',
     fee: '₹200 / head',
+    prize: { first: '₹1,000', second: '₹750', type: 'Individual' },
     meta: [
       { label: 'Timing', value: '12:30 – 1:30' },
       { label: 'Venue', value: 'CSE SmartRoom' },
@@ -109,6 +109,7 @@ const eventData = {
     title: 'AI Sprint',
     aka: 'aka AI-Hackathon',
     fee: '₹200 / head',
+    prize: { first: '₹1,500', second: '₹1,000', type: 'Group' },
     meta: [
       { label: 'Timing', value: '12:30 – 1:30' },
       { label: 'Venue', value: 'CSE Lab' },
@@ -131,6 +132,7 @@ const eventData = {
     title: 'Brain Battle',
     aka: 'aka Quiz',
     fee: '₹200 / head',
+    prize: { first: '₹1,500', second: '₹1,000', type: 'Group' },
     meta: [
       { label: 'Timing', value: '11:30 – 12:30' },
       { label: 'Venue', value: 'CSE SmartRoom' },
@@ -153,6 +155,7 @@ const eventData = {
     title: 'Tech Treadmill',
     aka: 'aka Tech Talk / JAM',
     fee: '₹200 / head',
+    prize: { first: '₹1,000', second: '₹750', type: 'Individual' },
     meta: [
       { label: 'Timing', value: '11:30 – 12:30' },
       { label: 'Venue', value: 'CSE Classroom (I301)' },
@@ -173,6 +176,7 @@ const eventData = {
     title: 'Game Clash',
     aka: 'aka Esports',
     fee: '₹200 / head',
+    prize: { first: '₹1,500', second: '₹1,000', type: 'Group' },
     meta: [
       { label: 'Timing', value: '11:30 – 2:30' },
       { label: 'Venue', value: 'CSE Lab' },
@@ -188,29 +192,37 @@ const eventData = {
     ],
     judging: 'Final decision by MC based on match results',
   },
-  'trend-parade': {
+  'adzap': {
     tag: 'Non-Technical Event',
-    title: 'Trend Parade',
-    aka: 'aka Fashion Show',
+    title: 'Adzap',
+    aka: 'aka Ad Making Competition',
     fee: '₹200 / head',
+    prize: { first: '₹1,500', second: '₹1,000', type: 'Group' },
     meta: [
+      { label: 'Timing', value: '1:30 – 2:00' },
       { label: 'Venue', value: 'Hilltop' },
-      { label: 'Format', value: 'Team Performance' },
+      { label: 'Team Size', value: '2–5 members' },
     ],
-    about: 'Teams present a themed walk showcasing creativity, styling, and confidence on stage. The event celebrates individual expression and collective coordination through fashion and performance.',
+    about: 'Teams craft and perform a live creative advertisement on a topic selected on the spot. With just a few minutes to prepare and perform, Adzap tests creativity, quick thinking, humor, and teamwork — all packed into a 3–5 minute act.',
     rules: [
-      'Theme adherence is mandatory',
-      'Performance and coordination will be evaluated',
-      'Appropriate and non-offensive attire only',
-      'Panel of judges will evaluate each team',
+      'Each team must consist of 2 to 5 members',
+      'Every team will be given 3 to 5 minutes to perform',
+      'Topics shared in advance — final topic selected on the spot from the list',
+      'Performance must be presented as a creative advertisement',
+      'Simple props are encouraged to enhance the act',
+      'No vulgar, offensive, political, or religious content',
+      'Copying existing advertisements is strictly prohibited',
+      'All teams must report on time',
+      'Any misbehavior or rule violation leads to disqualification',
     ],
-    judging: 'Judged by a panel based on theme adherence, styling, and stage presence',
+    judging: 'Creativity & originality, humor and entertainment value, presentation and teamwork',
   },
   'vocal-pulse': {
     tag: 'Non-Technical Event',
     title: 'Vocal Pulse',
     aka: 'aka Singing',
     fee: '₹200 / head',
+    prize: { first: '₹1,000', second: '₹750', type: 'Solo/Group' },
     meta: [
       { label: 'Timing', value: '11:30 – 12:30' },
       { label: 'Venue', value: 'Hilltop' },
@@ -231,6 +243,7 @@ const eventData = {
     title: 'Beat Theory',
     aka: 'aka Dance',
     fee: '₹200 / head',
+    prize: { first: '₹1,500', second: '₹1,000', type: 'Group' },
     meta: [
       { label: 'Timing', value: '3:00 – 4:00' },
       { label: 'Venue', value: 'Hilltop' },
@@ -272,21 +285,31 @@ function openModal(eventKey) {
   // Body
   const bodyEl = document.getElementById('modal-body');
   bodyEl.innerHTML = `
-    <div class="modal-section">
-      <p class="modal-section-label">About</p>
-      <p class="modal-section-text">${d.about}</p>
+  <div class="modal-section">
+    <p class="modal-section-label">About</p>
+    <p class="modal-section-text">${d.about}</p>
+  </div>
+  <div class="modal-section">
+    <p class="modal-section-label">Rules</p>
+    <ul class="modal-rules">
+      ${d.rules.map(r => `<li>${r}</li>`).join('')}
+    </ul>
+  </div>
+  <div class="modal-section">
+    <p class="modal-section-label">Judging</p>
+    <p class="modal-section-text">${d.judging}</p>
+  </div>
+  <div class="modal-prize-row">
+    <div class="modal-prize-item gold">
+      <span class="modal-prize-label">🥇 1st Prize</span>
+      <span class="modal-prize-amount">${d.prize.first}</span>
     </div>
-    <div class="modal-section">
-      <p class="modal-section-label">Rules</p>
-      <ul class="modal-rules">
-        ${d.rules.map(r => `<li>${r}</li>`).join('')}
-      </ul>
+    <div class="modal-prize-item silver">
+      <span class="modal-prize-label">🥈 2nd Prize</span>
+      <span class="modal-prize-amount">${d.prize.second}</span>
     </div>
-    <div class="modal-section">
-      <p class="modal-section-label">Judging</p>
-      <p class="modal-section-text">${d.judging}</p>
-    </div>
-  `;
+  </div>
+`;
 
   modalOverlay.classList.add('is-open');
   document.body.style.overflow = 'hidden';
