@@ -187,6 +187,7 @@ const eventData = {
       'eFootball: Knockout tournament · Match time 12 mins · Extra time ON · Penalty ON',
       'eFootball: No over back pass · No time wasting (results in loss)',
       'BGMI: TDM 4v4 · TPP mode · Elimination round format',
+      "FREE FIRE: Shouldn't use Grenade",
       'Fair play is mandatory — no cheating of any kind',
       'Game-specific rules will be strictly followed',
     ],
