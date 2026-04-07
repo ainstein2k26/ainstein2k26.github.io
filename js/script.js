@@ -188,7 +188,7 @@ const eventData = {
       'eFootball: No over back pass · No time wasting (results in loss)',
       'BGMI: TDM 4v4 · TPP mode · Elimination round format',
       "FREE FIRE: Shouldn't use Grenade",
-      "FREE FIRE: No Charecter skill
+      "FREE FIRE: No Charecter skill",
       'Fair play is mandatory — no cheating of any kind',
       'Game-specific rules will be strictly followed',
     ],
