@@ -275,6 +275,13 @@ function openModal(eventKey) {
   document.getElementById('modal-aka').textContent   = d.aka;
   document.getElementById('modal-fee').textContent   = d.fee;
 
+    // ✅ Add this line:
+  const registerBtn = document.getElementById('modal-register');
+  if (registerBtn) {
+    registerBtn.href = 'https://forms.gle/YWsroC22zHA5UN9M8';
+    registerBtn.target = '_blank';
+  }
+
   // Meta row
   const metaEl = document.getElementById('modal-meta');
   metaEl.innerHTML = d.meta.map(m => `
